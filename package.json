@@ -1,0 +1,32 @@
+{
+  "name": "static-locations-api",
+  "version": "0.0.0",
+  "keywords": [
+    "static",
+    "locations",
+    "api"
+  ],
+  "main": "dist/index.js",
+  "author": "Kennedy Rose <krose@escaladesports.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escaladesports/static-locations-api.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "esca-scripts build --no-react --no-css",
+    "bundle": "esca-scripts bundle --src src/index.js --no-react --no-css --dist dist-browser",
+    "dev": "esca-scripts dev --no-react --no-css",
+    "prepublishOnly": "npm run build",
+    "reset": "esca-scripts reset",
+    "test": "npm run build && esca-scripts test --no-react --no-css",
+    "travis": "opn https://travis-ci.org/escaladesports/static-locations-api/branches"
+  },
+  "devDependencies": {
+    "esca-scripts": "^1.3.1",
+    "opn-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  }
+}
