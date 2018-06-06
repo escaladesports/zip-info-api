@@ -19,6 +19,7 @@
     "dev": "esca-scripts dev --no-react --no-css",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
+    "run": "esca-scripts run --file 'src/index'",
     "test": "npm run build && esca-scripts test --no-react --no-css",
     "travis": "opn https://travis-ci.org/escaladesports/static-locations-api/branches"
   },
@@ -27,6 +28,9 @@
     "opn-cli": "^3.1.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "fs-extra": "^6.0.1",
+    "subcommander": "^1.0.0",
+    "zips": "^1.1.2"
   }
 }

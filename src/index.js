@@ -1,12 +1,11 @@
-function TestModule() {
-	const def = {
-		test: '123'
-	}
-	const obj = {
-		anotherTest: 'abc',
-		...def,
-	}
-	return obj
-}
+import zips from 'zips/data/loc-tree.json'
+import { outputJson } from 'fs-extra'
 
-export default TestModule
+async function outputZipCodes(){
+	await Promise.all(zips.index.map(obj => {
+		let zip = obj.zip
+		delete obj.zip
+		return outputJson(`./dist-json/${zip}.json`, obj)
+	}))
+}
+outputZipCodes()
