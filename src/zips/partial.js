@@ -24,7 +24,7 @@ async function outputPartialZipCodes(options){
 		}
 	})
 	await Promise.all(Object.keys(partials).map(key => {
-		return outputJson(join(options.path, `./partial/${key}.json`), partials[key])
+		return outputJson(join(options.path, `./zip/partial/${key}.json`), partials[key])
 	}))
 	console.log(`Wrote partial zip codes`)
 }

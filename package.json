@@ -7,6 +7,9 @@
     "api"
   ],
   "main": "dist/index.js",
+  "bin": {
+    "static-locations": "dist/cli.js"
+  },
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
@@ -15,11 +18,13 @@
   "license": "MIT",
   "scripts": {
     "build": "esca-scripts build --no-react --no-css",
+    "build:api": "npm run build:json && npm run build:static",
+    "build:copy": "cp -r static/* dist-json",
+    "build:json": "babel-node src/cli build --path './dist-json'",
     "bundle": "esca-scripts bundle --src src/index.js --no-react --no-css --dist dist-browser",
     "dev": "esca-scripts dev --no-react --no-css",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
-    "run": "esca-scripts run --file 'src/index'",
     "test": "npm run build && esca-scripts test --no-react --no-css",
     "travis": "opn https://travis-ci.org/escaladesports/static-locations-api/branches"
   },
