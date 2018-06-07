@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import sc from 'subcommander'
 import build from './build'
+import zips from './zips'
 
-sc.command(`build`, {
-		desc: `Build zip code files`,
+const buildCmd = sc.command(`build`, {
+		desc: `Build location JSON files`,
 		callback: build,
 	})
 	.option(`path`, {

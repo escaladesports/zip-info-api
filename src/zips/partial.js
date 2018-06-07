@@ -4,7 +4,7 @@ import { outputJson } from 'fs-extra'
 
 async function outputPartialZipCodes(options){
 	options = {
-		minimumDigits: 1,
+		minimumDigits: 2,
 		path: `./`,
 		...options
 	}
@@ -14,7 +14,8 @@ async function outputPartialZipCodes(options){
 	zips.index.forEach(obj => {
 		let digits = obj.zip.split(``)
 		let key = ``
-		for (let i = 0; i < digits.length; i++) {
+		let len = digits.length - 1
+		for (let i = 0; i < len - 1; i++) {
 			key += digits[i]
 			if (i < minimum) continue
 			if (!(key in partials)) {

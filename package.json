@@ -1,5 +1,5 @@
 {
-  "name": "static-locations-api",
+  "name": "zip-info-api",
   "version": "0.0.0",
   "keywords": [
     "static",
@@ -8,12 +8,12 @@
   ],
   "main": "dist/index.js",
   "bin": {
-    "static-locations": "dist/cli.js"
+    "zip-info-api": "dist/cli.js"
   },
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/static-locations-api.git"
+    "url": "https://github.com/escaladesports/zip-info-api.git"
   },
   "license": "MIT",
   "scripts": {
@@ -26,7 +26,7 @@
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "npm run build && esca-scripts test --no-react --no-css",
-    "travis": "opn https://travis-ci.org/escaladesports/static-locations-api/branches"
+    "travis": "opn https://travis-ci.org/escaladesports/zip-info-api/branches"
   },
   "devDependencies": {
     "esca-scripts": "^1.3.1",

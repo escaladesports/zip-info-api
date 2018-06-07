@@ -6,7 +6,7 @@ const nonAlpha = /[^a-zA-Z0-9]/g
 
 async function outputCompleteCities(options) {
 	options = {
-		minimumDigits: 1,
+		minimumDigits: 2,
 		path: `./`,
 		...options
 	}
@@ -23,7 +23,8 @@ async function outputCompleteCities(options) {
 
 		let digits = name.split(``)
 		let key = ``
-		for (let i = 0; i < digits.length; i++) {
+		let len = digits.length - 1
+		for (let i = 0; i < len; i++) {
 			key += digits[i]
 			if (i < minimum) continue
 			if (!(key in partials)) {
