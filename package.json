@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "build": "esca-scripts build --no-react --no-css",
-    "build:api": "npm run build:json && npm run build:static",
+    "build:api": "npm run build:json && npm run build:copy",
     "build:copy": "cp -r static/* dist-json",
     "build:json": "babel-node src/cli build --path './dist-json'",
     "bundle": "esca-scripts bundle --src src/index.js --no-react --no-css --dist dist-browser",
