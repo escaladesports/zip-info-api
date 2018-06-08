@@ -4,7 +4,7 @@ import { outputJson } from 'fs-extra'
 
 async function outputPartialZipCodes(options){
 	options = {
-		minimumDigits: 2,
+		minimumDigits: 1,
 		path: `./`,
 		...options
 	}
