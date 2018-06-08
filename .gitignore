@@ -14,7 +14,6 @@ node_modules/
 .env.*
 dist
 .next
-json
 public
 .cache
 envdotjs-key
