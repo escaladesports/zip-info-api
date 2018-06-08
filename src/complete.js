@@ -12,7 +12,7 @@ async function outputCompleteZipCodes(options) {
 		let obj = { ...fileObj }
 		let zip = obj.zip
 		delete obj.zip
-		return outputJson(join(options.path, `./zip/complete/${zip}.json`), obj)
+		return outputJson(join(options.path, `./complete/${zip}.json`), obj)
 	}))
 	console.log(`Wrote complete zip codes`)
 }

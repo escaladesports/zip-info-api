@@ -2,8 +2,12 @@
   "name": "zip-info-api",
   "version": "0.0.0",
   "keywords": [
-    "static",
+    "zip",
     "locations",
+    "coordinates",
+    "latitude",
+    "longitude",
+    "json",
     "api"
   ],
   "main": "dist/index.js",

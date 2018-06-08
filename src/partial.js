@@ -15,7 +15,7 @@ async function outputPartialZipCodes(options){
 		let digits = obj.zip.split(``)
 		let key = ``
 		let len = digits.length - 1
-		for (let i = 0; i < len - 1; i++) {
+		for (let i = 0; i < len; i++) {
 			key += digits[i]
 			if (i < minimum) continue
 			if (!(key in partials)) {
@@ -25,7 +25,7 @@ async function outputPartialZipCodes(options){
 		}
 	})
 	await Promise.all(Object.keys(partials).map(key => {
-		return outputJson(join(options.path, `./zip/partial/${key}.json`), partials[key])
+		return outputJson(join(options.path, `./partial/${key}.json`), partials[key])
 	}))
 	console.log(`Wrote partial zip codes`)
 }
