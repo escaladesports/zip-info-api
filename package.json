@@ -30,7 +30,7 @@
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "npm run build && esca-scripts test --no-react --no-css",
-    "travis": "opn https://travis-ci.org/escaladesports/zip-info-api/branches"
+    "netlify": "opn https://app.netlify.com/sites/zip-info-api/deploys"
   },
   "devDependencies": {
     "esca-scripts": "^1.3.1",
