@@ -1,1 +1,2 @@
-/    https://github.com/escaladesports/zip-info-api
+/              https://github.com/escaladesports/zip-info-api
+/:path/:zip    /:path/:zip.json
